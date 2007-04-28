@@ -1,0 +1,88 @@
+Employee:
+	-name
+	-office
+	-officehours
+	-photo
+	-website
+	-position(secretary, faculty, r.a., t.a., grader)
+	if(teaching_duties)
+		-days
+		-time slot(s)
+		-location of regularly scheduled classes
+
+Room
+	-room number
+	-room type(office,classroom,seminar room, lab)
+
+	if(office)
+		-name
+		-photo
+		-schedule of occupant
+	if(class)
+		-schedule of all classes meeting during current term
+		-link to faculty member teaching class
+
+	if(seminar_room)
+		-schedule of activities
+
+		foreach activity
+			-contact person
+				 -name
+				 -phone
+				 -office
+			-date
+			-start/end times
+			-description of purpose
+
+	if(research_lab)
+		-purpose
+		-number of computers
+		-type of computers
+		-contact person
+		-hours of operation
+
+Courses:
+	-schedules for current term
+	-all terms available
+
+
+Must be able to:
+     -add, change, delete all database data
+     -display screen for all data in db
+     -add,change,delete employee
+     -add,change,delete room
+     -add,change,delete class
+     -add,change,delete event
+     -display class schedule
+     -display employee data
+     -display room schedule
+     -display calendar of events
+
+Documentation:
+     -document describing arch of the app.
+	       -er diagram
+	       -data dictionary
+	       -function of all php scripts
+	       -description of interaction between php scripts
+     -user's guide
+	       -enable new user to understand system and use it
+     -printout of all php scripts.
+	       -well structured
+	       -appropriately commented
+	       -author's name, data, and certification that code is work of author on each script
+
+The following documentation is required and due at the demonstration:
+   •    A document describing the architecture of the application.
+		(ER diagram)  •
+		The data dictionary  •
+		The function of all PHP scripts  •
+		Description of the interaction of all PHP scripts •
+   •    A user's guide with sufficient detail to enable a new user to understand and use the
+        system.
+   •    A printout of the final version of the PHP scripts.
+	The code must be well structured
+        Appropriately commented.
+	Each script must include the
+		author's name
+		date
+		certification that the code is the work of the author.

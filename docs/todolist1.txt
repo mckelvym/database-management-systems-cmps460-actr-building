@@ -1,0 +1,22 @@
+--TODO LIST--
+
+Gather Sample Data:
+        Employees: Gavin
+         (name,office,hours,phone,photos,site,position)
+         if(teaching duties) get days, times, locations
+
+        Rooms: Mark
+         (type, #)
+         if(office) get occupant
+         if(classrooms) note it
+         if(seminar room) get activities, contact person,date,start/end, purpose
+         if(lab) get purpose,hours,#comps,type_comps,contact_person
+
+        Courses: Jed
+         ulink info: (terms_avaiable, course#,courseid,etc(all available info))
+
+Begin Working on css template.
+Begin Working on php template.
+Wait for class account before we start everything else (database creation, etc).
+Remember, comment code (part of documentation).
+Email collected data to members.

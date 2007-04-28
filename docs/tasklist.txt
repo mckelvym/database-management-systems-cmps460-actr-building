@@ -1,0 +1,90 @@
+CMPS460: Group M
+Task List
+
+Jed Ancona	jca8822
+Gavin Choate	gdc0730
+James McKelvy	jmm0468
+
+Webpages:
+	Navigation (main) Page: Gavin
+	Delete all data: Everyone
+	Employee (add,change,delete,display): Gavin
+	Room (add,change,delete,display,room_schedule): Mark
+	Class (add,change,delete,display): Mark 
+	Event (add,change,delete,display): Jed
+	Class Schedule (display): Jed
+	Calendar of Events (display): Gavin
+
+PHP scripts:
+	Delete all data: Everyone
+	Employee (add,change,delete,display): Gavin
+	Room (add,change,delete,display,room_schedule): Mark
+	Class (add,change,delete,display): Mark
+	Event (add,change,delete,display): Jed
+	Class Schedule (display): Jed
+	Calendar of Events (display): Gavin
+
+Database (creating) tables:
+	Rooms: Jed
+	Employees: Mark
+	Courses: Mark
+	ResearchLab: Gavin
+	Class: Jed
+	OfficeHours: Gavin
+	TeachingDuties: Jed
+	Activity: Jed
+	
+
+Gathering Sample Data:
+	Employees: Gavin
+	 (name,office,hours,phone,photos,site,position)
+	 ?(teaching duties, days, times, locations)
+
+	Rooms: Mark
+	 (type, #)
+	 ?(office, occupant)
+	 ?(classrooms)
+	 ?(seminar rooms, activities, contact person,date,start/end, purpose)
+	 ?(lab, purpose,hours,#comps,type_comps,contact_person)
+
+	Courses: Jed
+	 ulink info: (terms_avaiable, course#,courseid,etc(all available info))
+
+Documentation:
+	ER Diagram: Jed
+	Architecure of Application Document: Everyone
+	User's Guide: Everyone
+	Data Dictionary: Gavin
+	Function of all php scripts: Jed
+	Description of interaction between scripts: Mark
+	Commenting of scripts: Everyone
+	Printouts: Everyone
+
+Testing:
+	Navigation (main) Page: Mark
+	Add, Change, Delete all data: Mark
+	Employee (add,change,delete,display): Jed
+	Room (add,change,delete,display,room_schedule): Gavin
+	Class (add,change,delete,display): Gavin
+	Event (add,change,delete,display): Mark
+	Class Schedule (display): Gavin
+	Calendar of Events (display): Jed
+
+Continuity:
+	Look and feel: Gavin
+	Naming conventions of files,displayedinfo,database: Mark
+	Data Integrity (test data): Jed
+
+Signatures:
+
+
+
+	Jed Ancona
+
+
+
+	James McKelvy
+
+
+
+	Gavin Choate

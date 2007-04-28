@@ -1,0 +1,289 @@
+/*
+* colors: 
+* D73900 -> red
+* eab728 -> orange
+* B1934F -> brown
+* 00D79E -> teal
+* 1900D7 -> blue
+* 5B4FB1 -> purple/blue
+*
+*/
+
+body {
+	background: url(../images/background_img.jpg) top repeat-x;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	margin: 0 auto;
+	width: 950px;
+	height: 600px;
+	border: 0px dashed #00ff00;
+	margin-top: 0px;
+	padding: 0px;
+	text-align: left;
+	background: url(../images/database.jpg) top right no-repeat;
+}
+
+#logo {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#database {
+	position: inherit;
+	right: 10px;
+	top: 0px;
+}
+
+#navbar {
+	position: relative;
+	height: 49px;
+	margin-top: -48px;
+	margin-left: 295px;
+	border: 0px dashed #0000ff;
+	text-align: left;
+	padding-right: 0px;
+	
+	clear: both;
+	margin-bottom: 20px;
+}
+
+ul#navbar {
+	margin: 0px;	
+	padding: 0;
+	/*height: 29px;*/
+	list-style: none;
+	
+}
+
+
+#navbar li{
+	display: inline;
+	color: #ffffff;
+
+	text-align: center;
+}
+
+
+#navbar li a {
+
+	margin-top: -14px;
+	color: #000000;
+	border: 0px solid #ff0000;
+	
+	float: left;
+	
+	height: 29px;
+	position: relative;
+
+	font-family: Verdana;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;		
+}
+
+#navbar li a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+#leftCap {
+	background-image: url(../images/inactive_left.jpg);
+	background-repeat: no-repeat;
+	background-position-x: right;
+	border: 0px solid #00ff00;
+	float: left;
+	margin-top: 2px;
+	height: 49px;
+	width: 11px;
+}
+
+#navLinks {
+	
+	float: left;
+	padding: 0px;
+	border: 0px solid #ff0000;
+	margin-top: 2px;
+	padding-top: 0px;
+	background-image: url(../images/inactive_tab_bg.jpg);
+	background-repeat: repeat-x;
+	background-position-y: bottom;
+	height: 49px;
+}
+
+#rightCap {
+	background: url(../images/inactive_right.jpg) bottom left no-repeat;
+	float: left;
+	margin-top: 2px;
+	height: 49px;
+	width: 11px;
+}
+
+#navbar .activeTab {
+	
+	border: 0px solid #00ff00;
+	background: url(../images/active_tab.jpg) no-repeat;
+	width: 178px;
+	padding-top: 20px;
+	margin-top: -16px;
+	
+}
+
+#navbar .inactiveTab {
+	
+	padding-top: 25px;
+	background-image: url(../images/inactive_tab_bg.jpg);
+	background-repeat: repeat-x;
+	height: 24px;
+	padding-left: 10px;
+	/*
+	padding-top: 18px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	*/
+	font-size: 12px;
+	margin-top: -16px;
+}
+
+/*
+#goBack {
+	clear: both;
+	float: left;
+	margin-top: -18px;
+	height: 54px;
+	width: 54px;
+}
+
+#goForward {
+	position: relative;
+	left: 896px;
+	clear: right;
+	float: left;
+	margin-top: -18px;
+	height: 54px;
+	width: 54px;
+}
+*/
+
+#content {
+	position: relative;
+	margin-top: 80px;
+	height: 500px;
+	min-height: 600px;
+	border: 0px dashed #0fffff;
+	
+	padding-right: 5px;
+	background-color: #ffffff;
+	background: url(../images/omg_pepper.jpg) center no-repeat;
+}
+
+table.default {
+	
+	padding: 0px;
+	margin: 0px auto;
+	border-collapse: collapse;
+	
+}
+
+table.default a {
+	color: #ca2020; //5B4FB1;
+	text-decoration: none;
+}
+
+table.default a:hover{
+	color: #ca2020; //5B4FB1;
+	text-decoration: underline;
+}
+
+table.default a:visited{
+	color: #ca2020; //5B4FB1;
+}
+
+table.default a:active{
+	color: #ca2020; //5B4FB1;
+}
+
+thead.default td{
+	background-color: #ca2020; //5B4FB1;
+	color: #ffffff;
+	border-bottom: 2px solid #ca2020; //5B4FB1;
+	border-left: 1px solid #ca2020; //5B4FB1;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+tbody.default {
+	border-left: 1px dashed #ca2020; //5B4FB1;
+	border-right: 1px dashed #ca2020; //5B4FB1;
+}
+
+tbody.default td {
+	border-bottom: 1px dashed #ca2020; //5B4FB1;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 0px;
+	border-collapse: separate;
+}
+
+/** table schedule */
+
+table.schedule {
+	
+	padding: 0px;
+	margin: 0px auto;
+	border-collapse: collapse;
+	font-size: 12px;
+}
+
+table.schedule a {
+	color: #eab728;
+	text-decoration: none;
+}
+
+table.schedule a:hover{
+	color: #eab728;
+	text-decoration: underline;
+}
+
+table.schedule a:visited{
+	color: #eab728;
+}
+
+table.schedule a:active{
+	color: #eab728;
+}
+
+thead.schedule td{
+	background-color: #eab728;
+	color: #000000;
+	border-bottom: 2px solid #000000;
+	border-left: 1px solid #eab728;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+tbody.schedule {
+	border-left: 1px dashed #eab728;
+	border-right: 1px dashed #eab728;
+}
+
+tbody.schedule td {
+	border-bottom: 1px dashed #eab728;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 0px;
+	border-collapse: separate;
+}
+

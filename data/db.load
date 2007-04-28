@@ -1,0 +1,83 @@
+select 'Loading admin';
+load data local infile 'admin.data'
+ignore
+into table admin
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading officehours';
+load data local infile 'officehours.data'
+ignore
+into table officehours
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading events';
+load data local infile 'events.data'
+ignore
+into table events
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading seminars';
+load data local infile 'seminars.data'
+ignore
+into table seminar
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading offices';
+load data local infile 'offices.data'
+ignore
+into table office
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading classrooms';
+load data local infile 'lectures.data'
+ignore
+into table classroom
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading researchlabs';
+load data local infile 'rlabs.data'
+ignore
+into table researchlab
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading computerlabs';
+load data local infile 'clabs.data'
+ignore
+into table computerlab
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading classes';
+load data local infile 'classes.data' 
+ignore
+into table class
+fields terminated by ','
+lines terminated by '\r\n';
+
+select 'Loading courses';
+load data local infile 'course.data'
+ignore
+into table course
+fields terminated by ','
+lines terminated by '\r\n';
+
+select 'Loading rooms';
+load data local infile 'rooms.data'
+ignore
+into table room
+fields terminated by ',';
+-- lines terminated by '\r\n';
+
+select 'Loading employees';
+load data local infile 'employee.data'
+ignore
+into table employee
+fields terminated by ',';
+-- lines terminated by '\r\n';

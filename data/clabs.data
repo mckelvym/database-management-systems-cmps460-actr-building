@@ -1,0 +1,21 @@
+118,10,linux,111-11-1111,8:00A-5:00P,mwf,Virtual reality
+120,10,windows,222-22-2222,8:00A-5:00P,mtrf,Motion capture
+202,30,dual,333-33-3333,8:00A-8:00P,mtwrf,General purpose for graduate students
+204,5,unix,444-44-4444,9:00A-3:00P,mtwrf,VLSI
+208,3,dual,555-55-5555,8:00A-5:00P,mtw,For teaching assistants
+209,3,mac,555-55-5555,8:00A-5:00P,wrf,For more teaching assistants
+211,5,windows,555-55-5555,2:00A-7:00P,mtwrf,For less? teaching assistants
+213,5,linux,666-66-6666,9:00A-4:00P,mwf,Weather simulation
+216,15,dual,777-77-7777,8:00A-5:00P,mtwrf,Software research
+228,15,dual,555-55-5555,8:00A-5:00P,mf,Another general purpose for graduate students
+230,5,mac,888-88-8888,4:00A-9:00P,mtwrfsu,Bizarre lab
+232,3,windows,999-99-9999,10:00A-12:00P,mtr,Neural simulation
+234,3,linux,999-99-9999,11:00A-1:00P,twf,3D imaging
+235,8,dual,111-11-1111,10:00A-6:00P,mtwrf,Networks research
+238,15,dual,555-55-5555,9:00A-6:30P,mwf,Graduate special research
+240,10,mac,111-11-1111,11:00A-4:00P,m,Unproductive research lab
+244,5,windows,222-22-2222,8:00A-6:00P,mtwf,System simulation
+310,6,dual,777-77-7777,9:30A-2:00P,mwf,Yet another research lab
+317,6,dual,777-77-7777,10:00A-3:30P,tr,Awesome stuff lab
+328,10,linux,333-33-3333,10:00A-5:00P,mtwrf,Teaching assistants
+329,10,dual,333-33-3333,10:00A-4:30P,mtwrf,Teaching assistants again

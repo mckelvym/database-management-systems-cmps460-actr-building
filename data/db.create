@@ -1,0 +1,132 @@
+--- drop tables ---
+drop table if exists officehours;
+drop table if exists events;
+drop table if exists seminar;
+drop table if exists office;
+drop table if exists classroom;
+drop table if exists computerlab;
+drop table if exists researchlab;
+drop table if exists class;
+drop table if exists course;
+drop table if exists room;
+drop table if exists employee;
+drop table if exists admin;
+
+--- create tables ---
+create table admin(
+	id 	int(4) not null auto_increment,
+	user_name	varchar(50),
+	password	varchar(50),
+	primary key (id)
+);
+
+create table employee(
+	id		varchar(11),
+	lastname	varchar(250),
+	firstname	varchar(250),
+	office_num	varchar(4),
+	phone		varchar(12),
+	photo		varchar(250),
+	website		varchar(250),
+	position	varchar(250),
+	primary key (id)
+);
+
+create table room(
+	room_num		varchar(4),
+	room_type		varchar(30),
+	primary key (room_num)
+);
+
+create table course(
+	course_num		int,
+	title			varchar(250),
+	dept			varchar(250),
+	credit			int,
+	primary key (course_num)
+);
+
+create table class(
+	year			int,
+	term			char(2),
+	course_num		int,
+	course_id		int,
+	section			varchar(4),
+	days			varchar(6),
+	time			varchar(20),
+	level			varchar(4),
+	teacher_id		varchar(11),
+	room_num		varchar(4),
+	foreign key (course_num) references course (course_num),
+	primary key (course_id),
+	foreign key (teacher_id) references employee (id),
+	foreign key (room_num) 	 references room (room_num)
+);
+
+create table computerlab(
+	room_num		varchar(4),
+	num_computers		int,
+	type_computers		varchar(30),
+	contact_id		varchar(11),
+	hours			varchar(20),
+	days			varchar(6),
+	purpose			varchar(250),
+	primary key (room_num),
+	foreign key (room_num) references room (room_num),	
+	foreign key (contact_id) references employee (id)
+);
+
+create table researchlab(
+	room_num		varchar(4),
+	contact_id		varchar(30),
+	hours			varchar(20),
+	days			varchar(6),
+	purpose			varchar(250),
+	primary key (room_num),
+	foreign key (room_num) references room (room_num),
+	foreign key (contact_id) references employee (id)
+);
+
+create table classroom(
+	room			varchar(4),
+	num_seats		int,
+	primary key (room),
+	foreign key (room) references room (room_num)
+);
+
+create table office(
+	room			varchar(4),
+	occupant_id		varchar(11),
+	primary key (room,occupant_id),
+	foreign key (room) references room (room_num),
+	foreign key (occupant_id) references employee (id)
+);
+
+create table seminar(
+	room_num		varchar(4),
+	contact_id		varchar(11),
+	date			date,
+	time			varchar(20),
+	purpose			varchar(250),
+	primary key (room_num,date,time),
+	foreign key (room_num) references room (room_num),
+	foreign key (contact_id) references employee (id)
+);
+
+create table events(
+	date			date,
+	time			varchar(20),
+	contact_id		varchar(11),
+	location		varchar(250),
+	purpose			varchar(250),	
+	primary key (date,time,location),
+	foreign key (contact_id) references employee (id)
+);
+
+create table officehours(
+	id			varchar(11),
+	day			varchar(9),
+	time			varchar(20),
+	primary key (id, day, time),
+	foreign key (id) references employee (id)
+);

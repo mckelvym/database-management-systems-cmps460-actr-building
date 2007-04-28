@@ -1,0 +1,118 @@
+Scripts, their functions, and how they are related.
+
+admin/:
+
+class_edit.php
+Allows adding, editing, deleting, and delete all of courses. Called by classschedule.php.
+
+classschedule.php
+Displays a class schedule by means of navigation using dropdown boxes. User can proceed to editing, deleting, adding, or delete all classes from this page. Calls class_edit.php.
+
+create_db.php
+Drops tables then recreates them in the database. This script is called by reload_db.php.
+
+delete_data.php
+Deletes all data from tables in the database. This script is called from index.php.
+
+delete_db.php
+Deletes all the tables in the database. This script is called from index.php.
+
+employee_edit.php
+Page that handles showing of edit/add forms for an employee and also handles delete one or delete all. Called by employeeinfo.php and employee.php.
+
+employeeinfo.php
+Shows employee information page and from here user can delete employee or edit employee or manage teaching duties if there are any or manage office hours. Called by employee.php and calls employe_edit.php.
+
+employee.php
+Shows a listing of all employees and also has dropdowns for specific employee. User can also manage employees from here. Calls employeeinfo.php and calls employee_edit.php.
+
+event_edit.php
+Handles management of events like edit/add/delete/delete all. This scripts is called by the events.php script.
+
+events.php
+A page for showing all events as well as links to management of events. This script calls event_edit.php.
+
+index.php
+Index page that includes links to pages not on the main navigation bar. This script calls a number of scripts not located on the main navigation bar.
+
+load_db.php
+Loads data into the tables of the database. Usually called in conjunction with create_db.php by the script reload_db.php. 
+
+login_edit.php
+Allows editing of user logins to the admin side. This script is called by index.php.
+
+login.php
+The login page displayed to a user not logged into the admin side. This script is called when the user is not logged in and calls index.php if the user is logged in.
+
+logout.php
+Clears the session for a logged in user. This script just goes back to login.php.
+
+officehours_edit.php
+Allows management of an employees office hours such as add/edit/delete/delete all. This script is called from the employeinfo.php script for editing office hours.
+
+reload_db.php
+Drops all tables and recreats them and then reloads data into the tables. This script is called from index.php and calls create_db.php and load_db.php.
+
+room_edit.php
+Page that displays specific forms for editing different types of rooms or adding them. Also you can delete rooms here. This script is called by roominfo.php and room.php.
+
+roominfo.php
+Displays information about a specific room according to type with links to management options. This script is called by room.php and calls room_edit.php.
+
+room.php
+Displays all the rooms, and gives links to management of the rooms. This script calls roominfo.php and room_edit.php.
+
+showclasses.php
+Shows all classes in the database. This script is called from index.php.
+
+showcourses_edit.php
+Shows all courses in the system and give options for management such as add, edit, delete, delete all. This script is called from index.php.
+
+showofficehours.php
+Shows all office hours for all employees. This script is called from index.php.
+
+showseminars_edit.php
+Shows all seminars and allows management of seminars. This script is called from the main navigation bar.
+
+teaching_edit.php
+For a specific employee this script can be used for management of teaching duties. This script is called from the employeeinfo.php script.
+
+viewquery.php
+This script can be used for making queries into the database through a web browser. This script is called from the index.php script.
+
+viewtable.php
+This script can be used for viewing all tables in the database and the information contained within them. This script is called from the index.php script.
+
+scripts/:
+classschedule.php
+Displays a class schedule by means of navigation using dropdown boxes. This script is called from the main navigation bar. 
+
+employeeinfo.php
+Shows employee information page including office hours and teaching duties if there are any. This script is called by employe.php.
+
+employee.php
+Shows a listing of all employees and also has dropdowns for specific types of employees. This script is called from the main navigation bar and calls employeeinfo.php.
+
+events.php
+A  page for showing all events. This script is called from index.php
+
+index.php
+Index page that includes links to pages not on the main navigation bar. This is the main index page for the site and calls several scripts that aren't listed in the main navigation bar.
+
+roominfo.php
+Displays information about a specific room according to type. This script is called by the room.php script.
+
+room.php
+Displays all the rooms and also has dropdowns for types of rooms. This script is called from the main navigation bar and calls the roominfo.php script.
+
+showclasses.php
+Shows all classes in the database. This is called from index.php.
+
+showcourses.php
+Shows all courses in the system. This is called from index.php.
+
+showofficehours.php
+Shows all office hours for all employees. This is called from index.php
+
+showseminars.php
+Shows all seminars. This is called from the main navigation bar.

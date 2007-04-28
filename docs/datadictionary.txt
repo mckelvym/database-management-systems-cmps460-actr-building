@@ -1,0 +1,120 @@
+Data Dictionary
+
+// Keeps track of login information for administration of the database
+ADMIN(ID[PK], USER_NAME, PASSWORD)
+	id 			int(4) not null auto_increment,
+	user_name	varchar(50),	// username for login to admin side
+	password		varchar(50),	// password for login to admin side
+	primary key (id)
+
+// Keeps track of employees in the system
+EMPLOYEE(ID[PK], LASTNAME, FIRSTNAME, OFFICE_NUM, PHONE, PHOTO, WEBSITE, POSITION)
+	id			varchar(11),	// employee id number
+	lastname		varchar(250),	// employee lastname
+	firstname	varchar(250),	// employee firstname
+	office_num	varchar(4),	// office number of the employee
+	phone		varchar(12),	// phone number of the employee
+	photo		varchar(250),	// photo for the employee if available
+	website		varchar(250),	// website of employee
+	position		varchar(250),	// employee's position
+	primary key (id)
+
+// Keeps track of the various types of rooms in the building
+ROOM(ROOM_NUM[PK], ROOM_TYPE)
+	room_num		varchar(4),	// the room number of this room
+	room_type		varchar(30),	// the type of this room
+	primary key (room_num)
+
+// Keeps track of all courses available
+COURSE(COURSE_NUM[PK], TITLE, DEPT, CREDIT)
+	course_num		int,			// number course identification
+	title				varchar(250),	// title of this course
+	dept			varchar(250),	// department of this course
+	credit			int,			// credit hours for this course
+	primary key (course_num)
+
+// Keeps track of all classes available
+CLASS(YEAR, TERM, COURSE_NUM[FK], COURSE_ID[PK], SECTION, DAYS, TIME, LEVEL, TEACHER_ID[FK], ROOM[FK])
+	year				int,			// year class is offered
+	term			char(2),		// term class is offered
+	course_num		int,			// course number of the class
+	course_id		int,			// unique course id of the class
+	section			varchar(4),	// section of the class
+	days			varchar(6),	// days class is offered
+	time			varchar(20),	// time class if offered
+	level			varchar(4),	// level of the class (UN/GR)
+	teacher_id		varchar(11),	// teacher of the class
+	room_num		varchar(4),	// room that class is taught in 
+	foreign key (course_num) references course (course_num),
+	primary key (course_id),
+	foreign key (teacher_id) references employee (id),
+	foreign key (room_num) references room (room_num)
+
+// Keeps track of the computer labs in the building
+COMPUTERLAB(ROOM_NUM[PK,FK], NUM_COMPUTERS, TYPE_COMPUTERS, CONTACT_ID[FK], HOURS, DAYS, PURPOSE)
+	room_num		varchar(4),	// room of the lab
+	num_computers	int,			// number of computers in the lab
+	type_computers	varchar(30),	// type of computers in the lab
+	contact_id		varchar(11),	// contact for the lab
+	hours			varchar(20),	// hours of operation for the lab
+	days			varchar(6),	// days lab is open
+	purpose			varchar(250),	// purpose of the lab
+	primary key (room_num),
+	foreign key (room_num) references room (room_num),	
+	foreign key (contact_id) references employee (id)
+
+// Keeps track of the research labs in the building
+RESEARCHLAB(ROOM_NUM[PK,FK], CONTACT_ID[FK], HOURS, DAYS, PURPOSE)
+	room_num		varchar(4),	// room of the lab
+	contact_id		varchar(30),	// contact for the lab
+	hours			varchar(20),	// hours of operation for the lab
+	days			varchar(6),	// days lab is open
+	purpose			varchar(250),	// purpose of the lab
+	primary key (room_num),
+	foreign key (room_num) references room (room_num),
+	foreign key (contact_id) references employee (id)
+
+// Keeps track of which rooms are classrooms in the building
+CLASSROOM(ROOM[PK,FK], NUM_SEATS)
+	room			varchar(4),	// room of the classroom
+	num_seats		int,			// number of seat in the classroom
+	primary key (room),
+	foreign key (room) references room (room_num)
+
+// Keeps track of occupied offices in the building
+OFFICE(ROOM[PK,FK], OCCUPANT_ID[PK,FK])
+	room			varchar(4),	// room of the office
+	occupant_id		varchar(11),	// occupant of the office
+	primary key (room,occupant_id),	
+	foreign key (room) references room (room_num),
+	foreign key (occupant_id) references employee (id)
+
+// Keeps track of the seminar rooms in the building
+SEMINAR(ROOM_NUM[PK,FK], CONTACT_ID[FK], DATE[PK], TIME[PK], PURPOSE)
+	room_num		varchar(4),	// room number of the seminar
+	contact_id		varchar(11),	// contact for the seminar
+	date			date,		// date of the seminar
+	time			varchar(20),	// time of the seminar
+	purpose			varchar(250),	// purpose of the seminar
+	primary key (room_num,date,time),
+	foreign key (room_num) references room (room_num),
+	foreign key (contact_id) references employee (id)
+
+// Keeps track of all events and when they are scheduled
+EVENTS(DATE[PK], TIME[PK], CONTACT_ID[FK], PURPOSE, LOCATION[PK])
+	date		date,			// date of the event
+	time		varchar(20),		// time of the event
+	contact_id	varchar(11),		// contact for the event
+	location		varchar(250),		// location of the event
+	purpose		varchar(250),		// purpose of the event
+	primary key (date,time,location),
+	foreign key (contact_id) references employee (id)
+
+// Keeps track of the office hours for the employees
+OFFICEHOURS(ID[PK,FK],DAY[PK],TIME[PK])
+	id			varchar(11),		// id of the employee for office hours
+	day			varchar(9),		// day of the office hours
+	time		varchar(20),		// time for the office hours
+	primary key (id, day, time),
+	foreign key (id) references employee (id)
+
